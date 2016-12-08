@@ -10,7 +10,9 @@ defmodule MnemonicSlugs.Wordlist do
       "aurora"
   """
   @spec get_word() :: String.t
-  def get_word, do: MnemonicSlugs.Wordlist.Words.list |> Enum.random
+  def get_word do
+    MnemonicSlugs.Wordlist.Words.list |> Enum.random
+  end
 
   @doc """
   Returns `count` random words as a list.
@@ -21,8 +23,6 @@ defmodule MnemonicSlugs.Wordlist do
   """
   @spec get_words(num_words :: Integer.t) :: List.t
   def get_words(num_words) when is_integer(num_words) do
-    1..num_words
-    |> Enum.into([])
-    |> Enum.map(fn _ -> MnemonicSlugs.Wordlist.get_word end)
+    MnemonicSlugs.Wordlist.Words.list |> Enum.take_random(num_words)
   end
 end
