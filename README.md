@@ -9,7 +9,7 @@ Add mnemonic_slugs to your list of dependencies in `mix.exs`:
 
 ```
 def deps do
-  [{:mnemonic_slugs, "~> 0.0.1"}]
+  [{:mnemonic_slugs, "~> 0.0.2"}]
 end
 ```
 

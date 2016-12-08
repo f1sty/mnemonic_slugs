@@ -1,7 +1,7 @@
 defmodule MnemonicSlugs.Mixfile do
   use Mix.Project
 
-  @version "0.0.1"
+  @version "0.0.2"
 
   def project do
     [app: :mnemonic_slugs,
@@ -16,7 +16,7 @@ defmodule MnemonicSlugs.Mixfile do
 
   defp deps do
     [{:earmark, "~> 0.1", only: :dev},
-     {:ex_doc, "~> 0.11", only: :dev},
+     {:ex_doc, "~> 0.12", only: :dev},
      {:mix_test_watch, "~> 0.2", only: :dev}]
   end
 
