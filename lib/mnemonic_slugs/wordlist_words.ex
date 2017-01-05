@@ -1,6 +1,9 @@
 defmodule MnemonicSlugs.Wordlist.Words do
   @moduledoc """
-  The list of mnemonic words from http://web.archive.org/web/20090918202746/http://tothink.com/mnemonic/wordlist.html.
+  The slightly enhanced list of mnemonic words adapted from Oren Tirosh's
+  original list.
+
+  The original list can be found [here](https://github.com/devshane/mnemonicode/blob/master/mn_wordlist.c).
   """
 
   @doc """

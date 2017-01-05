@@ -11,7 +11,8 @@ defmodule MnemonicSlugs.Mixfile do
      package: package(),
      name: "Mnemonic Slugs",
      source_url: "https://github.com/devshane/mnemonic_slugs",
-     deps: deps()]
+     deps: deps(),
+     docs: [main: "MnemonicSlugs"]]
   end
 
   defp deps do
