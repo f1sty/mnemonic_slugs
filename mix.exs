@@ -1,22 +1,22 @@
 defmodule MnemonicSlugs.Mixfile do
   use Mix.Project
 
-  @version "0.0.2"
+  @version "0.0.3"
 
   def project do
     [app: :mnemonic_slugs,
      version: @version,
      elixir: "~> 1.2",
-     description: description,
-     package: package,
+     description: description(),
+     package: package(),
      name: "Mnemonic Slugs",
      source_url: "https://github.com/devshane/mnemonic_slugs",
-     deps: deps]
+     deps: deps()]
   end
 
   defp deps do
-    [{:earmark, "~> 0.1", only: :dev},
-     {:ex_doc, "~> 0.12", only: :dev},
+    [{:earmark, "~> 1.0", only: :dev},
+     {:ex_doc, "~> 0.14", only: :dev},
      {:mix_test_watch, "~> 0.2", only: :dev}]
   end
 

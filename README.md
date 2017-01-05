@@ -1,7 +1,10 @@
 # Mnemonic Slugs
 
-Mnemonic Slugs is an Elixir library that generates easy to remember slugs. It uses a 
-word list curated by Oren Tirosh. The original site and word list can be found [here](http://web.archive.org/web/20100105040244/http://tothink.com/mnemonic/index.html).
+Mnemonic Slugs is an Elixir library that generates easy to remember slugs. It 
+uses a slightly enhanced word list curated by Oren Tirosh as part of his 
+mnemonic encoding project.
+
+A fork of the original project can be found [here](https://github.com/devshane/mnemonicode).
 
 ## Installation
 
@@ -9,7 +12,7 @@ Add mnemonic_slugs to your list of dependencies in `mix.exs`:
 
 ```
 def deps do
-  [{:mnemonic_slugs, "~> 0.0.2"}]
+  [{:mnemonic_slugs, "~> 0.0.3"}]
 end
 ```
 

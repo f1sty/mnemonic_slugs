@@ -4,7 +4,7 @@ defmodule MnemonicSlugsTest.WordlistTest do
   test "get_word/0" do
     word = MnemonicSlugs.Wordlist.get_word
     assert is_binary(word)
-    assert String.length(word) > 3
+    assert String.length(word) >= 4 && String.length(word) <= 7
   end
 
   test "get_words/1" do
