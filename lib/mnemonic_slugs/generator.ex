@@ -12,7 +12,7 @@ defmodule MnemonicSlugs.Generator do
       iex> MnemonicSlugs.Generator.generate_slug
       "aurora-bermuda"
   """
-  @spec generate_slug() :: String.t
+  @spec generate_slug() :: String.t()
   def generate_slug, do: generate_slug(2)
 
   @doc """
@@ -21,8 +21,19 @@ defmodule MnemonicSlugs.Generator do
       iex> MnemonicSlugs.Generator.generate_slug(10)
       "karate-textile-jungle-patrol-veteran-clone-nerve-stone-soviet-sting"
   """
-  @spec generate_slug(count :: Integer.t) :: String.t
+  @spec generate_slug(count :: Integer.t()) :: String.t()
   def generate_slug(count) do
-    MnemonicSlugs.Wordlist.get_words(count) |> Enum.join(@separator)
+    generate_slug(count, @separator)
+  end
+
+  @doc """
+  Generates a mnemonic slug `count` words long using `delimiter`.
+
+      iex> MnemonicSlugs.generate_slug(2, "_")
+      "karate_textile"
+  """
+  @spec generate_slug(count :: Integer.t(), delimiter :: String.t()) :: String.t()
+  def generate_slug(count, delimiter) do
+    MnemonicSlugs.Wordlist.get_words(count) |> Enum.join(delimiter)
   end
 end
